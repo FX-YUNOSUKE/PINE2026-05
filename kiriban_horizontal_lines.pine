@@ -1,0 +1,87 @@
+//@version=6
+indicator("切り番水平線インジケーター v1", overlay=true, max_lines_count=500, max_labels_count=500)
+
+//━━━━━━━━━━━━━━━━━━━━━━
+// 設定
+//━━━━━━━━━━━━━━━━━━━━━━
+stepPips      = input.int(50, "切り番の間隔（pips）", minval=1)
+lineCount     = input.int(20, "上下に表示する本数", minval=1, maxval=200)
+showLabels    = input.bool(true, "価格ラベルを表示")
+extendRight   = input.bool(true, "右方向に延長")
+lineWidth     = input.int(1, "ラインの太さ", minval=1, maxval=4)
+lineColor     = input.color(color.new(color.gray, 35), "ライン色")
+mainLineColor = input.color(color.new(color.blue, 0), "大きい切り番の色")
+mainEvery     = input.int(100, "大きい切り番の間隔（pips）", minval=1)
+
+//━━━━━━━━━━━━━━━━━━━━━━
+// pips → 価格幅
+// 通貨ペアによって pip の大きさが違うため自動調整
+// JPYペア：0.01
+// それ以外：0.0001
+// ゴールド等は必要に応じて手動調整してください
+//━━━━━━━━━━━━━━━━━━━━━━
+pipSize = syminfo.mintick == 0.001 or syminfo.mintick == 0.01 ? 0.01 : 0.0001
+
+stepPrice = stepPips * pipSize
+mainStepPrice = mainEvery * pipSize
+
+//━━━━━━━━━━━━━━━━━━━━━━
+// 配列
+//━━━━━━━━━━━━━━━━━━━━━━
+var line[]  lines  = array.new_line()
+var label[] labels = array.new_label()
+
+// 初回のみライン・ラベルを作成
+if barstate.isfirst
+    total = lineCount * 2 + 1
+
+    for i = 0 to total - 1
+        l = line.new(
+             x1=bar_index,
+             y1=close,
+             x2=bar_index + 1,
+             y2=close,
+             extend=extendRight ? extend.right : extend.none,
+             color=lineColor,
+             width=lineWidth
+        )
+        array.push(lines, l)
+
+        lb = label.new(
+             x=bar_index,
+             y=close,
+             text="",
+             style=label.style_label_left,
+             textcolor=color.white,
+             color=color.new(color.black, 20),
+             size=size.small
+        )
+        array.push(labels, lb)
+
+//━━━━━━━━━━━━━━━━━━━━━━
+// 現在価格を基準に一番近い切り番を算出
+//━━━━━━━━━━━━━━━━━━━━━━
+baseLevel = math.round(close / stepPrice) * stepPrice
+
+//━━━━━━━━━━━━━━━━━━━━━━
+// ライン更新
+//━━━━━━━━━━━━━━━━━━━━━━
+for i = 0 to array.size(lines) - 1
+    offset = i - lineCount
+    priceLevel = baseLevel + offset * stepPrice
+
+    isMain = math.abs(priceLevel % mainStepPrice) < syminfo.mintick * 2
+
+    l = array.get(lines, i)
+    line.set_xy1(l, bar_index - 1, priceLevel)
+    line.set_xy2(l, bar_index, priceLevel)
+    line.set_extend(l, extendRight ? extend.right : extend.none)
+    line.set_color(l, isMain ? mainLineColor : lineColor)
+    line.set_width(l, isMain ? math.max(lineWidth + 1, 2) : lineWidth)
+
+    lb = array.get(labels, i)
+    label.set_x(lb, bar_index)
+    label.set_y(lb, priceLevel)
+    label.set_text(lb, showLabels ? str.tostring(priceLevel, format.mintick) : "")
+    label.set_color(lb, showLabels ? color.new(isMain ? mainLineColor : color.black, 20) : color.new(color.black, 100))
+    label.set_textcolor(lb, showLabels ? color.white : color.new(color.white, 100))
