@@ -85,3 +85,27 @@ for i = 0 to array.size(lines) - 1
     label.set_text(lb, showLabels ? str.tostring(priceLevel, format.mintick) : "")
     label.set_color(lb, showLabels ? color.new(isMain ? mainLineColor : color.black, 20) : color.new(color.black, 100))
     label.set_textcolor(lb, showLabels ? color.white : color.new(color.white, 100))
+//━━━━━━━━━━━━━━━━━━━━━━
+// アラート設定
+//━━━━━━━━━━━━━━━━━━━━━━
+enableAlert = input.bool(true, "切り番アラートを有効")
+
+// 現在価格が最も近い切り番
+nearestLevel = math.round(close / stepPrice) * stepPrice
+
+// 上抜け・下抜け判定
+crossUp   = ta.crossover(close, nearestLevel)
+crossDown = ta.crossunder(close, nearestLevel)
+
+// アラート条件
+alertcondition(
+     enableAlert and crossUp,
+     title   = "切り番 上抜け",
+     message = "価格が切り番を上抜けしました"
+)
+
+alertcondition(
+     enableAlert and crossDown,
+     title   = "切り番 下抜け",
+     message = "価格が切り番を下抜けしました"
+)
