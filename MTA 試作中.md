@@ -1,26 +1,39 @@
 //@version=5
+// MTA v2.1 + MTF 2系統 + アラート選択 (2026-05-20) 仕様書v2.1完全版に忠実。
+// UIコンパクト版: group 4・inline横活用で縦圧縮。f_mtaCalc()=仕様書v2.1不変。
 indicator('MTA v2.1', overlay = true, max_lines_count = 500, max_labels_count = 500)
 
 import DevLucem/ZigLib/1 as ZigZag
 
-Depth     = input.int(3, '深さ', minval = 1, step = 1, inline = 'zz1', group = 'ZigZag設定')
-Deviation = input.int(5, '偏差', minval = 1, step = 1, inline = 'zz1', group = 'ZigZag設定')
-Backstep  = input.int(3, 'Backstep', minval = 2, step = 1, inline = 'zz2', group = 'ZigZag設定')
-lineThick = input.int(2, '線の太さ', minval = 1, maxval = 4, inline = 'zz2', group = 'ZigZag設定')
-showZZ    = input.bool(true, 'ZigZag線を表示(チャート足)', group = 'ZigZag設定')
-upColor   = input.color(color.lime, '上昇', inline = 'zzc', group = 'ZigZag設定')
-dnColor   = input.color(color.red, '下降', inline = 'zzc', group = 'ZigZag設定')
+// ── ZigZag（深さ|偏差 / Backstep|線太さ / ZZ線|上昇|下降） ──
+Depth     = input.int(3, '深さ', minval = 1, step = 1, inline = 'zz1', group = 'ZigZag')
+Deviation = input.int(5, '偏差', minval = 1, step = 1, inline = 'zz1', group = 'ZigZag')
+Backstep  = input.int(3, 'Backstep', minval = 2, step = 1, inline = 'zz2', group = 'ZigZag')
+lineThick = input.int(2, '線太さ', minval = 1, maxval = 4, inline = 'zz2', group = 'ZigZag')
+showZZ    = input.bool(true, 'ZZ線', inline = 'zz3', group = 'ZigZag')
+upColor   = input.color(color.lime, '↑', inline = 'zz3', group = 'ZigZag')
+dnColor   = input.color(color.red, '↓', inline = 'zz3', group = 'ZigZag')
 
-showChart = input.bool(true, 'チャート足', inline = 'sw', group = 'MTA表示')
-showSel   = input.bool(true, '選択足', inline = 'sw', group = 'MTA表示')
-selTFin   = input.timeframe('60', '選択足の時間足', group = 'MTA表示')
-lblOff    = input.int(10, 'ラベル右オフセット(bars)', minval = 0, group = 'MTA表示')
+// ── MTA表示（チャート足|選択足 / 選択足TF|ラベルOFS） ─────
+showChart = input.bool(true, 'チャート足', inline = 'm1', group = 'MTA表示')
+showSel   = input.bool(true, '選択足', inline = 'm1', group = 'MTA表示')
+selTFin   = input.timeframe('60', '選択足TF', inline = 'm2', group = 'MTA表示')
+lblOff    = input.int(10, 'ラベルOFS', minval = 0, inline = 'm2', group = 'MTA表示')
 
-cUp = input.color(color.blue, '上昇', inline = 'cc', group = 'チャート足MTAの色')
-cDn = input.color(color.red, '下降', inline = 'cc', group = 'チャート足MTAの色')
-sUp = input.color(color.aqua, '上昇', inline = 'sc', group = '選択足MTAの色')
-sDn = input.color(color.fuchsia, '下降', inline = 'sc', group = '選択足MTAの色')
-trCol = input.color(color.gray, 'トレンドレス残置(共通)', group = 'その他の色')
+// ── MTAの色（C足↑↓ / 選択足↑↓|残置） 1グループに統合 ──────
+cUp   = input.color(color.blue, 'チャート足↑', inline = 'c1', group = 'MTAの色')
+cDn   = input.color(color.red, '↓', inline = 'c1', group = 'MTAの色')
+sUp   = input.color(color.aqua, '選択足↑', inline = 'c2', group = 'MTAの色')
+sDn   = input.color(color.fuchsia, '↓', inline = 'c2', group = 'MTAの色')
+trCol = input.color(color.gray, '残置', inline = 'c2', group = 'MTAの色')
+
+// ── アラート（系統|種別|方向 各横並び3行） ────────────────
+almChart = input.bool(true, 'チャート足', inline = 'a1', group = 'アラート')
+almSel   = input.bool(true, '選択足', inline = 'a1', group = 'アラート')
+almOccur = input.bool(true, '発生', inline = 'a2', group = 'アラート')
+almBreak = input.bool(true, 'ブレイク', inline = 'a2', group = 'アラート')
+almUp    = input.bool(true, '上昇系', inline = 'a3', group = 'アラート')
+almDn    = input.bool(true, '下降系', inline = 'a3', group = 'アラート')
 
 f_tfJP(string tf) =>
     s = timeframe.in_seconds(tf)
@@ -224,3 +237,24 @@ else
     if not na(bS)
         label.delete(bS)
         bS := na
+
+sym = syminfo.ticker
+if almChart and not na(cTr) and not na(cTr[1])
+    if cTr[1] == 0 and cTr == 1 and almOccur and almUp
+        alert(sym + ' チャート足MTA 上昇発生 @' + str.tostring(cM), alert.freq_once_per_bar_close)
+    if cTr[1] == 0 and cTr == -1 and almOccur and almDn
+        alert(sym + ' チャート足MTA 下降発生 @' + str.tostring(cM), alert.freq_once_per_bar_close)
+    if cTr[1] == 1 and cTr == 0 and almBreak and almUp
+        alert(sym + ' チャート足MTA 上昇終了(ブレイク) @' + str.tostring(cM), alert.freq_once_per_bar_close)
+    if cTr[1] == -1 and cTr == 0 and almBreak and almDn
+        alert(sym + ' チャート足MTA 下降終了(ブレイク) @' + str.tostring(cM), alert.freq_once_per_bar_close)
+if almSel and not na(sTr) and not na(sTr[1])
+    stf = f_tfJP(selTF)
+    if sTr[1] == 0 and sTr == 1 and almOccur and almUp
+        alert(sym + ' ' + stf + 'MTA 上昇発生 @' + str.tostring(sM), alert.freq_once_per_bar_close)
+    if sTr[1] == 0 and sTr == -1 and almOccur and almDn
+        alert(sym + ' ' + stf + 'MTA 下降発生 @' + str.tostring(sM), alert.freq_once_per_bar_close)
+    if sTr[1] == 1 and sTr == 0 and almBreak and almUp
+        alert(sym + ' ' + stf + 'MTA 上昇終了(ブレイク) @' + str.tostring(sM), alert.freq_once_per_bar_close)
+    if sTr[1] == -1 and sTr == 0 and almBreak and almDn
+        alert(sym + ' ' + stf + 'MTA 下降終了(ブレイク) @' + str.tostring(sM), alert.freq_once_per_bar_close)
