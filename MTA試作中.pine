@@ -1,0 +1,287 @@
+{\rtf1\ansi\ansicpg932\cocoartf2869
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red109\green109\blue109;\red13\green13\blue13;\red255\green255\blue255;
+\red74\green135\blue243;\red46\green126\blue46;\red56\green178\blue151;\red211\green211\blue211;\red242\green100\blue109;
+\red240\green106\blue20;\red170\green77\blue188;}
+{\*\expandedcolortbl;;\cssrgb\c50196\c50196\c50196;\cssrgb\c5882\c5882\c5882;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c35686\c61176\c96471;\cssrgb\c21961\c55686\c23529;\cssrgb\c25882\c74118\c65882;\cssrgb\c85882\c85882\c85882;\cssrgb\c96863\c48627\c50196;
+\cssrgb\c96078\c49804\c9020;\cssrgb\c72941\c40784\c78431;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 //
+\f1\b @version=
+\f0\b0 6\cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 // MTA v2.1 (2026-05-17) \uc0\u12452 \u12505 \u12531 \u12488 \u39366 \u21205 \u12539 \u30683 \u30462 \u12476 \u12525 \u29256 \u12290 \u34920 \u31034 \u21517 \u12391 \u31292 \u20685 \u29256 \u12434 \u21028 \u21029 \u12290 \cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 //\cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 // \uc0\u26680 \u24515 (\u19978 \u26119 ): \u25276 \u12375 \u23433 \u20516 C = \u22522 \u28310 \u39640 \u20516 A \u12392  \u26032 \u30906 \u23450 \u39640 \u20516 B \u12398 \u38291 \u12398 \u30906 \u23450 \u23433 \u20516 \u12398 \u26368 \u23433 \u20516 \u12290 \cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 // MTA\uc0\u12399 2\u12388 \u12398 \u38626 \u25955 \u12452 \u12505 \u12531 \u12488 \u12391 \u12375 \u12363 \u21205 \u12363 \u12394 \u12356 \u22266 \u23450 \u20516 :\cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 //   \uc0\u30330 \u29983  : N\u23383  \u23433 1\u8594 \u39640 1\u8594 \u23433 2(\u23433 2>\u23433 1) \u12363 \u12388  close\u23455 \u20307 >\u39640 1\cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 //          \uc0\u8594  A=\u39640 1(\u20385 \u26684 \u20445 \u25345 ), \u26283 \u23450 C=\u23433 2\cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 //   \uc0\u26356 \u26032  : close\u23455 \u20307 >A \u12363 \u12388  A\u20197 \u38477 \u12395 A\u12424 \u12426 \u39640 \u12356 \u30906 \u23450 \u39640 \u20516 B(\u26178 \u31995 \u21015 \u12391 \u26368 \u12418 \u26089 \u12356 1\u12388 =\u26368 \u21476 )\cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 //          \uc0\u8594  C=A\u12316 B\u38291 \u12398 \u30906 \u23450 \u23433 \u20516 \u12398 \u26368 \u23433 \u20516 , A\u8592 B\u12290 B\u12364 \u28961 \u12369 \u12428 \u12400 \u20309 \u12418 \u12375 \u12394 \u12356 (\u29366 \u24907 \u19981 \u22793 )\u12290 \cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 //          B\uc0\u26410 \u30906 \u23450 \u12398 \u38291 \u12399  C \u19981 \u21205 (\u30906 \u23450 \u36275 \u12505 \u12540 \u12473 \u12539 \'a76/\'a72.2/E9)\u12290 1\u12496 \u12540 1\u27573 \u12290 \cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 //   \uc0\u32066 \u20102  : close\u23455 \u20307 \u12364 \u29694 \u22312 \u12398 C\u12434 \u19979 \u25244 \u12369  \u8594  \u12488 \u12524 \u12531 \u12489 \u12524 \u12473 (\u21516 \u33394 \u28857 \u32218 \u12391 \u27531 \u32622 )\cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 // \uc0\u34920 \u31034 : \u19978 \u26119 =\u38738 \u23455 \u32218 /\u19979 \u38477 =\u36196 \u23455 \u32218 \u12289 \u12521 \u12505 \u12523 "MTA"\u12434 \u30011 \u38754 \u21491 \u12408 \u12458 \u12501 \u12475 \u12483 \u12488 \u12290 \u32066 \u20102 \u12391 \u21516 \u33394 \u28857 \u32218 \u12290 \cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 //   \uc0\u38291    : \u19978 \u35352 \u20197 \u22806 \u12399 \u23436 \u20840 \u19981 \u21205 \u12290 \u38291 \u12398 \u39640 \u20516 /\u23433 \u20516 \u12399 \u21028 \u26029 \u12395 \u19981 \u35201 \cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 // \uc0\u19979 \u38477 : \u39640 \u23433 \u12539 \u19978 \u19979 \u12434 \u21453 \u36578 \u12375 \u12383 \u23436 \u20840 \u23550 \u31216 \u12290 \cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 indicator\cf4 \strokec4 (\cf6 \strokec6 'MTA v2.1'\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 overlay\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf9 \strokec9 true\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 max_lines_count\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 500\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 max_labels_count\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 500\cf4 \strokec4 )\cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb3 \strokec7 import\cf4 \strokec4  \cf5 \strokec5 DevLucem/ZigLib/1\cf4 \strokec4  \cf7 \strokec7 as\cf4 \strokec4  \cf11 \strokec11 ZigZag\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8 Depth\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 input.int\cf4 \strokec4 (\cf10 \strokec10 3\cf7 \strokec7 ,\cf4 \strokec4  \cf6 \strokec6 'Depth'\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 minval\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 1\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 step\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 1\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 group\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf6 \strokec6 'ZigZag Config'\cf4 \strokec4 )\cb1 \
+\cf8 \cb3 \strokec8 Deviation\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 input.int\cf4 \strokec4 (\cf10 \strokec10 5\cf7 \strokec7 ,\cf4 \strokec4  \cf6 \strokec6 'Deviation'\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 minval\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 1\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 step\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 1\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 group\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf6 \strokec6 'ZigZag Config'\cf4 \strokec4 )\cb1 \
+\cf8 \cb3 \strokec8 Backstep\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 input.int\cf4 \strokec4 (\cf10 \strokec10 3\cf7 \strokec7 ,\cf4 \strokec4  \cf6 \strokec6 'Backstep'\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 minval\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 2\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 step\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 1\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 group\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf6 \strokec6 'ZigZag Config'\cf4 \strokec4 )\cb1 \
+\cf8 \cb3 \strokec8 lineThick\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 input.int\cf4 \strokec4 (\cf10 \strokec10 2\cf7 \strokec7 ,\cf4 \strokec4  \cf6 \strokec6 'Line Thickness'\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 minval\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 1\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 maxval\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 4\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 group\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf6 \strokec6 'ZigZag'\cf4 \strokec4 )\cb1 \
+\cf8 \cb3 \strokec8 showZZ\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 input.bool\cf4 \strokec4 (\cf9 \strokec9 true\cf7 \strokec7 ,\cf4 \strokec4  \cf6 \strokec6 'Show ZigZag line'\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 group\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf6 \strokec6 'ZigZag'\cf4 \strokec4 )\cb1 \
+\cf8 \cb3 \strokec8 upColor\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 input.color\cf4 \strokec4 (\cf9 \strokec9 color.lime\cf7 \strokec7 ,\cf4 \strokec4  \cf6 \strokec6 'Bull Color'\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 group\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf6 \strokec6 'ZigZag'\cf4 \strokec4 )\cb1 \
+\cf8 \cb3 \strokec8 dnColor\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 input.color\cf4 \strokec4 (\cf9 \strokec9 color.red\cf7 \strokec7 ,\cf4 \strokec4  \cf6 \strokec6 'Bear Color'\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 group\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf6 \strokec6 'ZigZag'\cf4 \strokec4 )\cb1 \
+\cf8 \cb3 \strokec8 lblOff\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 input.int\cf4 \strokec4 (\cf10 \strokec10 10\cf7 \strokec7 ,\cf4 \strokec4  \cf6 \strokec6 '\uc0\u12521 \u12505 \u12523 \u21491 \u12458 \u12501 \u12475 \u12483 \u12488 (bars)'\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 minval\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 0\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 group\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf6 \strokec6 'Display'\cf4 \strokec4 )\cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3 [\cf8 \strokec8 direction\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 z1\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 z2\cf4 \strokec4 ] \cf7 \strokec7 =\cf4 \strokec4  \cf11 \strokec11 ZigZag.zigzag\cf4 \strokec4 (\cf9 \strokec9 low\cf7 \strokec7 ,\cf4 \strokec4  \cf9 \strokec9 high\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 Depth\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 Deviation\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 Backstep\cf4 \strokec4 )\cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8 zpx\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf8 \strokec8 z2\cf4 \strokec4 .\cf8 \strokec8 price\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8 zix\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf8 \strokec8 z2\cf4 \strokec4 .\cf8 \strokec8 index\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 // \uc0\u9472 \u9472  ZigZag\u25551 \u30011 \u65288 ZigZag++ repaint \u12392 \u21516 \u19968 \u65289  \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb3 \strokec7 var\cf4 \strokec4  
+\f1\b \cf7 \strokec7 line
+\f0\b0 \cf4 \strokec4  \cf8 \strokec8 zz\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf9 \strokec9 na\cf4 \cb1 \strokec4 \
+\cf7 \cb3 \strokec7 if\cf4 \strokec4  \cf8 \strokec8 showZZ\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3     \cf8 \strokec8 zz\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf5 \strokec5 line.new\cf4 \strokec4 (\cf8 \strokec8 z1\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 z2\cf7 \strokec7 ,\cf4 \strokec4  \cf9 \strokec9 xloc.bar_time\cf7 \strokec7 ,\cf4 \strokec4  \cf9 \strokec9 extend.none\cf7 \strokec7 ,\cf4 \strokec4  \cf5 \strokec5 color.new\cf4 \strokec4 (\cf8 \strokec8 direction\cf4 \strokec4  \cf7 \strokec7 >\cf4 \strokec4  \cf10 \strokec10 0\cf4 \strokec4  \cf7 \strokec7 ?\cf4 \strokec4  \cf8 \strokec8 upColor\cf4 \strokec4  \cf7 \strokec7 :\cf4 \strokec4  \cf8 \strokec8 dnColor\cf7 \strokec7 ,\cf4 \strokec4  \cf10 \strokec10 0\cf4 \strokec4 )\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 width\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf8 \strokec8 lineThick\cf4 \strokec4 )\cb1 \
+\cb3     \cf7 \strokec7 if\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf5 \strokec5 na\cf4 \strokec4 (\cf8 \strokec8 zz\cf4 \strokec4 [\cf10 \strokec10 1\cf4 \strokec4 ])\cb1 \
+\cb3         \cf7 \strokec7 if\cf4 \strokec4  \cf8 \strokec8 direction\cf4 \strokec4  \cf7 \strokec7 ==\cf4 \strokec4  \cf8 \strokec8 direction\cf4 \strokec4 [\cf10 \strokec10 1\cf4 \strokec4 ]\cb1 \
+\cb3             \cf5 \strokec5 line.delete\cf4 \strokec4 (\cf8 \strokec8 zz\cf4 \strokec4 [\cf10 \strokec10 1\cf4 \strokec4 ])\cb1 \
+\cb3         \cf7 \strokec7 else\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 line.set_extend\cf4 \strokec4 (\cf8 \strokec8 zz\cf4 \strokec4 [\cf10 \strokec10 1\cf4 \strokec4 ]\cf7 \strokec7 ,\cf4 \strokec4  \cf9 \strokec9 extend.none\cf4 \strokec4 )\cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 // \uc0\u9472 \u9472  \u30906 \u23450 \u12500 \u12508 \u12483 \u12488 \u33988 \u31309 \u65288 direction\u21453 \u36578 \u65309 \u30906 \u23450 \u65289  \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb3 \strokec7 var\cf4 \strokec4  
+\f1\b \cf7 \strokec7 array
+\f0\b0 \cf4 \strokec4 <
+\f1\b \cf7 \strokec7 float
+\f0\b0 \cf4 \strokec4 > \cf8 \strokec8 zP\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 array.new_float\cf4 \strokec4 ()\cb1 \
+\cf7 \cb3 \strokec7 var\cf4 \strokec4  
+\f1\b \cf7 \strokec7 array
+\f0\b0 \cf4 \strokec4 <
+\f1\b \cf7 \strokec7 bool
+\f0\b0 \cf4 \strokec4 > \cf8 \strokec8 zH\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 array.new_bool\cf4 \strokec4 ()\cb1 \
+\cf7 \cb3 \strokec7 var\cf4 \strokec4  
+\f1\b \cf7 \strokec7 array
+\f0\b0 \cf4 \strokec4 <
+\f1\b \cf7 \strokec7 int
+\f0\b0 \cf4 \strokec4 > \cf8 \strokec8 zB\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 array.new_int\cf4 \strokec4 ()\cb1 \
+\
+\cf7 \cb3 \strokec7 if\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf5 \strokec5 na\cf4 \strokec4 (\cf8 \strokec8 direction\cf4 \strokec4 ) \cf7 \strokec7 and\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf5 \strokec5 na\cf4 \strokec4 (\cf8 \strokec8 direction\cf4 \strokec4 [\cf10 \strokec10 1\cf4 \strokec4 ]) \cf7 \strokec7 and\cf4 \strokec4  \cf8 \strokec8 direction\cf4 \strokec4  \cf7 \strokec7 !=\cf4 \strokec4  \cf8 \strokec8 direction\cf4 \strokec4 [\cf10 \strokec10 1\cf4 \strokec4 ]\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3     \cf8 \strokec8 pPrice\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf8 \strokec8 zpx\cf4 \strokec4 [\cf10 \strokec10 1\cf4 \strokec4 ]\cb1 \
+\cb3     \cf8 \strokec8 pBar\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 na\cf4 \strokec4 (\cf8 \strokec8 zix\cf4 \strokec4 [\cf10 \strokec10 1\cf4 \strokec4 ]) \cf7 \strokec7 ?\cf4 \strokec4  \cf10 \strokec10 -1\cf4 \strokec4  \cf7 \strokec7 :\cf4 \strokec4  \cf5 \strokec5 int\cf4 \strokec4 (\cf8 \strokec8 zix\cf4 \strokec4 [\cf10 \strokec10 1\cf4 \strokec4 ])\cb1 \
+\cb3     \cf8 \strokec8 pHigh\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf8 \strokec8 direction\cf4 \strokec4 [\cf10 \strokec10 1\cf4 \strokec4 ] \cf7 \strokec7 >\cf4 \strokec4  \cf10 \strokec10 0\cf4 \cb1 \strokec4 \
+\cb3     \cf7 \strokec7 if\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf5 \strokec5 na\cf4 \strokec4 (\cf8 \strokec8 pPrice\cf4 \strokec4 ) \cf7 \strokec7 and\cf4 \strokec4  \cf8 \strokec8 pBar\cf4 \strokec4  \cf7 \strokec7 >=\cf4 \strokec4  \cf10 \strokec10 0\cf4 \cb1 \strokec4 \
+\cb3         \cf2 \strokec2 // bar\uc0\u21336 \u35519  + \u20132 \u20114 \u24615 \u12460 \u12540 \u12489 \u65288 \u20181 \u27096 \'a72.1/E7: \u30906 \u23450 \u12500 \u12508 \u12483 \u12488 \u12399 \u21427 \u23494 \u12395 \u39640 \u23433 \u20132 \u20114 \u65289 \u12290 \cf4 \cb1 \strokec4 \
+\cb3         \cf2 \strokec2 // \uc0\u36942 \u21435 /\u21516 \u19968 bar\u12399 \u24382 \u12367 (pBar>last)\u12290 \u12373 \u12425 \u12395 ZigLib\u12364 \u21516 \u26041 \u21521 \u12500 \u12508 \u12483 \u12488 \u12434 \u30064 \u12496 \u12540 \u12391 \cf4 \cb1 \strokec4 \
+\cb3         \cf2 \strokec2 // \uc0\u36820 \u12377 \u12392 \u39640 \u39640 /\u23433 \u23433 \u12364 \u28151 \u20837 \u12375 \u20132 \u20114 \u23849 \u12428 \u8594 \'a75\u30330 \u29983 /\'a76\u26356 \u26032 \u12364 \u35492 \u12500 \u12508 \u12483 \u12488 \u12434 \u25342 \u12358 \u12383 \u12417 \u12289 \cf4 \cb1 \strokec4 \
+\cb3         \cf2 \strokec2 // \uc0\u21516 \u26041 \u21521 \u36899 \u32154 \u26178 \u12399 ZigZag\u23450 \u32681 \u12393 \u12362 \u12426 \u12300 \u12424 \u12426 \u26997 \u31471 \u12394 \u20516 (\u39640 =\u39640 \u12356 \u26041 /\u23433 =\u23433 \u12356 \u26041 )\u12301 \u12391 \cf4 \cb1 \strokec4 \
+\cb3         \cf2 \strokec2 // \uc0\u26411 \u23614 \u12434 \u32622 \u25563 \u12375 \u12289 \u21427 \u23494 \u12394 \u39640 \u23433 \u20132 \u20114 \u12434 \u20445 \u35388 \u12377 \u12427 \u12290 \cf4 \cb1 \strokec4 \
+\cb3         \cf7 \strokec7 if\cf4 \strokec4  \cf5 \strokec5 array.size\cf4 \strokec4 (\cf8 \strokec8 zP\cf4 \strokec4 ) \cf7 \strokec7 ==\cf4 \strokec4  \cf10 \strokec10 0\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 array.push\cf4 \strokec4 (\cf8 \strokec8 zP\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 pPrice\cf4 \strokec4 )\cb1 \
+\cb3             \cf5 \strokec5 array.push\cf4 \strokec4 (\cf8 \strokec8 zH\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 pHigh\cf4 \strokec4 )\cb1 \
+\cb3             \cf5 \strokec5 array.push\cf4 \strokec4 (\cf8 \strokec8 zB\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 pBar\cf4 \strokec4 )\cb1 \
+\cb3         \cf7 \strokec7 else\cf4 \strokec4  \cf7 \strokec7 if\cf4 \strokec4  \cf8 \strokec8 pBar\cf4 \strokec4  \cf7 \strokec7 >\cf4 \strokec4  \cf5 \strokec5 array.last\cf4 \strokec4 (\cf8 \strokec8 zB\cf4 \strokec4 )\cb1 \
+\cb3             \cf8 \strokec8 li\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 array.size\cf4 \strokec4 (\cf8 \strokec8 zP\cf4 \strokec4 ) \cf7 \strokec7 -\cf4 \strokec4  \cf10 \strokec10 1\cf4 \cb1 \strokec4 \
+\cb3             \cf7 \strokec7 if\cf4 \strokec4  \cf5 \strokec5 array.last\cf4 \strokec4 (\cf8 \strokec8 zH\cf4 \strokec4 ) \cf7 \strokec7 ==\cf4 \strokec4  \cf8 \strokec8 pHigh\cf4 \cb1 \strokec4 \
+\cb3                 \cf8 \strokec8 prevP\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 array.last\cf4 \strokec4 (\cf8 \strokec8 zP\cf4 \strokec4 )\cb1 \
+\cb3                 \cf8 \strokec8 better\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf8 \strokec8 pHigh\cf4 \strokec4  \cf7 \strokec7 ?\cf4 \strokec4  \cf8 \strokec8 pPrice\cf4 \strokec4  \cf7 \strokec7 >\cf4 \strokec4  \cf8 \strokec8 prevP\cf4 \strokec4  \cf7 \strokec7 :\cf4 \strokec4  \cf8 \strokec8 pPrice\cf4 \strokec4  \cf7 \strokec7 <\cf4 \strokec4  \cf8 \strokec8 prevP\cf4 \cb1 \strokec4 \
+\cb3                 \cf7 \strokec7 if\cf4 \strokec4  \cf8 \strokec8 better\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 array.set\cf4 \strokec4 (\cf8 \strokec8 zP\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 li\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 pPrice\cf4 \strokec4 )\cb1 \
+\cb3                     \cf5 \strokec5 array.set\cf4 \strokec4 (\cf8 \strokec8 zB\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 li\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 pBar\cf4 \strokec4 )\cb1 \
+\cb3             \cf7 \strokec7 else\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 array.push\cf4 \strokec4 (\cf8 \strokec8 zP\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 pPrice\cf4 \strokec4 )\cb1 \
+\cb3                 \cf5 \strokec5 array.push\cf4 \strokec4 (\cf8 \strokec8 zH\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 pHigh\cf4 \strokec4 )\cb1 \
+\cb3                 \cf5 \strokec5 array.push\cf4 \strokec4 (\cf8 \strokec8 zB\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 pBar\cf4 \strokec4 )\cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 // \uc0\u9472 \u9472  \u29366 \u24907  \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb3 \strokec7 var\cf4 \strokec4  
+\f1\b \cf7 \strokec7 int
+\f0\b0 \cf4 \strokec4  \cf8 \strokec8 trend\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 0\cf4 \strokec4  \cf2 \strokec2 // 0=trendless, 1=up, -1=down\cf4 \cb1 \strokec4 \
+\cf7 \cb3 \strokec7 var\cf4 \strokec4  
+\f1\b \cf7 \strokec7 float
+\f0\b0 \cf4 \strokec4  \cf8 \strokec8 aPx\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf9 \strokec9 na\cf4 \strokec4  \cf2 \strokec2 // \uc0\u22522 \u28310 \u12500 \u12508 \u12483 \u12488 \u20385 \u26684 \u65288 \u19978 \u26119 :\u39640 \u20516 A / \u19979 \u38477 :\u23433 \u20516 A\u65289 \cf4 \cb1 \strokec4 \
+\cf7 \cb3 \strokec7 var\cf4 \strokec4  
+\f1\b \cf7 \strokec7 int
+\f0\b0 \cf4 \strokec4  \cf8 \strokec8 aBar\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 -1\cf4 \strokec4  \cf2 \strokec2 // \uc0\u22522 \u28310 \u12500 \u12508 \u12483 \u12488 \u12398 \u12496 \u12540 \cf4 \cb1 \strokec4 \
+\cf7 \cb3 \strokec7 var\cf4 \strokec4  
+\f1\b \cf7 \strokec7 float
+\f0\b0 \cf4 \strokec4  \cf8 \strokec8 mta\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf9 \strokec9 na\cf4 \strokec4  \cf2 \strokec2 // \uc0\u29694 \u22312 \u12398 C\u65288 \u25276 \u12375 \u23433 \u20516 /\u25147 \u12426 \u39640 \u20516 \u65289 \cf4 \cb1 \strokec4 \
+\cf7 \cb3 \strokec7 var\cf4 \strokec4  
+\f1\b \cf7 \strokec7 int
+\f0\b0 \cf4 \strokec4  \cf8 \strokec8 mtaBar\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 -1\cf4 \cb1 \strokec4 \
+\cf7 \cb3 \strokec7 var\cf4 \strokec4  
+\f1\b \cf7 \strokec7 line
+\f0\b0 \cf4 \strokec4  \cf8 \strokec8 lMta\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf9 \strokec9 na\cf4 \cb1 \strokec4 \
+\cf7 \cb3 \strokec7 var\cf4 \strokec4  
+\f1\b \cf7 \strokec7 label
+\f0\b0 \cf4 \strokec4  \cf8 \strokec8 lbMta\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf9 \strokec9 na\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8 n\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 math.min\cf4 \strokec4 (\cf5 \strokec5 array.size\cf4 \strokec4 (\cf8 \strokec8 zP\cf4 \strokec4 )\cf7 \strokec7 ,\cf4 \strokec4  \cf5 \strokec5 math.min\cf4 \strokec4 (\cf5 \strokec5 array.size\cf4 \strokec4 (\cf8 \strokec8 zH\cf4 \strokec4 )\cf7 \strokec7 ,\cf4 \strokec4  \cf5 \strokec5 array.size\cf4 \strokec4 (\cf8 \strokec8 zB\cf4 \strokec4 )))\cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb3 \strokec7 if\cf4 \strokec4  \cf8 \strokec8 trend\cf4 \strokec4  \cf7 \strokec7 !=\cf4 \strokec4  \cf10 \strokec10 0\cf4 \strokec4  \cf7 \strokec7 and\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf5 \strokec5 na\cf4 \strokec4 (\cf8 \strokec8 lbMta\cf4 \strokec4 ) \cf7 \strokec7 and\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf5 \strokec5 na\cf4 \strokec4 (\cf8 \strokec8 mta\cf4 \strokec4 )\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3     \cf5 \strokec5 label.set_x\cf4 \strokec4 (\cf8 \strokec8 lbMta\cf7 \strokec7 ,\cf4 \strokec4  \cf9 \strokec9 bar_index\cf4 \strokec4  \cf7 \strokec7 +\cf4 \strokec4  \cf8 \strokec8 lblOff\cf4 \strokec4 )\cb1 \
+\cb3     \cf5 \strokec5 label.set_y\cf4 \strokec4 (\cf8 \strokec8 lbMta\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 mta\cf4 \strokec4 )\cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8 f_needDraw\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf9 \strokec9 false\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 // \uc0\u9472 \u9472  \u12488 \u12524 \u12531 \u12489 \u12524 \u12473 : \u26411 \u23614 3\u20491 \u12398 \u12415 \u21442 \u29031 \u65288 \u12501 \u12457 \u12540 \u12523 \u12496 \u12483 \u12463 \u31105 \u27490 \u12539 \u20181 \u27096 \u26360 \'a75/E4\u65289  \u9472 \cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 // \uc0\u26411 \u23614 \u12364 \u30906 \u23450 \u23433 \u20516 \u8594 \u19978 \u26119 \u30330 \u29983 \u20505 \u35036 \u12289 \u26411 \u23614 \u12364 \u30906 \u23450 \u39640 \u20516 \u8594 \u19979 \u38477 \u30330 \u29983 \u20505 \u35036 \u65288 \u20132 \u20114 \u24615 \u12391 \u37197 \u32622 \u20445 \u35388 \u65289 \cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb3 \strokec7 if\cf4 \strokec4  \cf8 \strokec8 trend\cf4 \strokec4  \cf7 \strokec7 ==\cf4 \strokec4  \cf10 \strokec10 0\cf4 \strokec4  \cf7 \strokec7 and\cf4 \strokec4  \cf8 \strokec8 n\cf4 \strokec4  \cf7 \strokec7 >=\cf4 \strokec4  \cf10 \strokec10 3\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3     \cf2 \strokec2 // \uc0\u19978 \u26119 \u30330 \u29983 : \u26411 \u23614 \u12364 \u30906 \u23450 \u23433 \u20516 \u12398 \u12392 \u12365  Low1\u8594 High1\u8594 Low2 \u37197 \u32622 \u12434 \u30452 \u25509 \u21462 \u12427 \cf4 \cb1 \strokec4 \
+\cb3     \cf7 \strokec7 if\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zH\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 n\cf4 \strokec4  \cf7 \strokec7 -\cf4 \strokec4  \cf10 \strokec10 1\cf4 \strokec4 )\cb1 \
+\cb3         \cf8 \strokec8 a1P\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zP\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 n\cf4 \strokec4  \cf7 \strokec7 -\cf4 \strokec4  \cf10 \strokec10 3\cf4 \strokec4 )\cb1 \
+\cb3         \cf8 \strokec8 h1P\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zP\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 n\cf4 \strokec4  \cf7 \strokec7 -\cf4 \strokec4  \cf10 \strokec10 2\cf4 \strokec4 )\cb1 \
+\cb3         \cf8 \strokec8 a2P\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zP\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 n\cf4 \strokec4  \cf7 \strokec7 -\cf4 \strokec4  \cf10 \strokec10 1\cf4 \strokec4 )\cb1 \
+\cb3         \cf7 \strokec7 if\cf4 \strokec4  \cf8 \strokec8 a2P\cf4 \strokec4  \cf7 \strokec7 >\cf4 \strokec4  \cf8 \strokec8 a1P\cf4 \strokec4  \cf7 \strokec7 and\cf4 \strokec4  \cf9 \strokec9 close\cf4 \strokec4  \cf7 \strokec7 >\cf4 \strokec4  \cf8 \strokec8 h1P\cf4 \cb1 \strokec4 \
+\cb3             \cf8 \strokec8 trend\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf10 \strokec10 1\cf4 \cb1 \strokec4 \
+\cb3             \cf8 \strokec8 aPx\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf8 \strokec8 h1P\cf4 \cb1 \strokec4 \
+\cb3             \cf8 \strokec8 aBar\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zB\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 n\cf4 \strokec4  \cf7 \strokec7 -\cf4 \strokec4  \cf10 \strokec10 2\cf4 \strokec4 )\cb1 \
+\cb3             \cf8 \strokec8 mta\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf8 \strokec8 a2P\cf4 \cb1 \strokec4 \
+\cb3             \cf8 \strokec8 mtaBar\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zB\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 n\cf4 \strokec4  \cf7 \strokec7 -\cf4 \strokec4  \cf10 \strokec10 1\cf4 \strokec4 )\cb1 \
+\cb3             \cf8 \strokec8 f_needDraw\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf9 \strokec9 true\cf4 \cb1 \strokec4 \
+\cb3             \cf8 \strokec8 f_needDraw\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 // \uc0\u19979 \u38477 \u30330 \u29983 : \u26411 \u23614 \u12364 \u30906 \u23450 \u39640 \u20516 \u12398 \u12392 \u12365  High1\u8594 Low1\u8594 High2 \u37197 \u32622 \u12434 \u30452 \u25509 \u21462 \u12427 \cf4 \cb1 \strokec4 \
+\cb3     \cf7 \strokec7 if\cf4 \strokec4  \cf8 \strokec8 trend\cf4 \strokec4  \cf7 \strokec7 ==\cf4 \strokec4  \cf10 \strokec10 0\cf4 \strokec4  \cf7 \strokec7 and\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zH\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 n\cf4 \strokec4  \cf7 \strokec7 -\cf4 \strokec4  \cf10 \strokec10 1\cf4 \strokec4 )\cb1 \
+\cb3         \cf8 \strokec8 h1P\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zP\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 n\cf4 \strokec4  \cf7 \strokec7 -\cf4 \strokec4  \cf10 \strokec10 3\cf4 \strokec4 )\cb1 \
+\cb3         \cf8 \strokec8 l1P\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zP\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 n\cf4 \strokec4  \cf7 \strokec7 -\cf4 \strokec4  \cf10 \strokec10 2\cf4 \strokec4 )\cb1 \
+\cb3         \cf8 \strokec8 h2P\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zP\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 n\cf4 \strokec4  \cf7 \strokec7 -\cf4 \strokec4  \cf10 \strokec10 1\cf4 \strokec4 )\cb1 \
+\cb3         \cf7 \strokec7 if\cf4 \strokec4  \cf8 \strokec8 h2P\cf4 \strokec4  \cf7 \strokec7 <\cf4 \strokec4  \cf8 \strokec8 h1P\cf4 \strokec4  \cf7 \strokec7 and\cf4 \strokec4  \cf9 \strokec9 close\cf4 \strokec4  \cf7 \strokec7 <\cf4 \strokec4  \cf8 \strokec8 l1P\cf4 \cb1 \strokec4 \
+\cb3             \cf8 \strokec8 trend\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf10 \strokec10 -1\cf4 \cb1 \strokec4 \
+\cb3             \cf8 \strokec8 aPx\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf8 \strokec8 l1P\cf4 \cb1 \strokec4 \
+\cb3             \cf8 \strokec8 aBar\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zB\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 n\cf4 \strokec4  \cf7 \strokec7 -\cf4 \strokec4  \cf10 \strokec10 2\cf4 \strokec4 )\cb1 \
+\cb3             \cf8 \strokec8 mta\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf8 \strokec8 h2P\cf4 \cb1 \strokec4 \
+\cb3             \cf8 \strokec8 mtaBar\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zB\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 n\cf4 \strokec4  \cf7 \strokec7 -\cf4 \strokec4  \cf10 \strokec10 1\cf4 \strokec4 )\cb1 \
+\cb3             \cf8 \strokec8 f_needDraw\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf9 \strokec9 true\cf4 \cb1 \strokec4 \
+\cb3             \cf8 \strokec8 f_needDraw\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 // \uc0\u9472 \u9472  \u19978 \u26119 \u12488 \u12524 \u12531 \u12489  \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb3 \strokec7 if\cf4 \strokec4  \cf8 \strokec8 trend\cf4 \strokec4  \cf7 \strokec7 ==\cf4 \strokec4  \cf10 \strokec10 1\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3     \cf7 \strokec7 if\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf5 \strokec5 na\cf4 \strokec4 (\cf8 \strokec8 mta\cf4 \strokec4 ) \cf7 \strokec7 and\cf4 \strokec4  \cf9 \strokec9 close\cf4 \strokec4  \cf7 \strokec7 <\cf4 \strokec4  \cf8 \strokec8 mta\cf4 \cb1 \strokec4 \
+\cb3         \cf2 \strokec2 // \uc0\u32066 \u20102 : close\u23455 \u20307 \u12364 \u29694 \u22312 \u12398 C\u12434 \u19979 \u25244 \u12369 \cf4 \cb1 \strokec4 \
+\cb3         \cf8 \strokec8 trend\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf10 \strokec10 0\cf4 \cb1 \strokec4 \
+\cb3         \cf8 \strokec8 aPx\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf9 \strokec9 na\cf4 \cb1 \strokec4 \
+\cb3         \cf8 \strokec8 aBar\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf10 \strokec10 -1\cf4 \cb1 \strokec4 \
+\cb3         \cf7 \strokec7 if\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf5 \strokec5 na\cf4 \strokec4 (\cf8 \strokec8 lMta\cf4 \strokec4 )\cb1 \
+\cb3             \cf5 \strokec5 line.set_style\cf4 \strokec4 (\cf8 \strokec8 lMta\cf7 \strokec7 ,\cf4 \strokec4  \cf9 \strokec9 line.style_dotted\cf4 \strokec4 )\cb1 \
+\cb3     \cf7 \strokec7 else\cf4 \strokec4  \cf7 \strokec7 if\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf5 \strokec5 na\cf4 \strokec4 (\cf8 \strokec8 aPx\cf4 \strokec4 ) \cf7 \strokec7 and\cf4 \strokec4  \cf9 \strokec9 close\cf4 \strokec4  \cf7 \strokec7 >\cf4 \strokec4  \cf8 \strokec8 aPx\cf4 \cb1 \strokec4 \
+\cb3         \cf2 \strokec2 // \uc0\u26356 \u26032 (\'a76): B = A.bar\u12424 \u12426 \u22823 \u12539 A.price\u12424 \u12426 \u39640 \u12356 \u30906 \u23450 \u39640 \u20516 \u12398 \u12358 \u12385 \cf4 \cb1 \strokec4 \
+\cb3         \cf2 \strokec2 // \uc0\u26178 \u31995 \u21015 \u12391 \u26368 \u12418 \u26089 \u12356 1\u12388 (\u26368 \u21476 )\u12290 \u35442 \u24403 \u28961 \u12369 \u12428 \u12400 \u20309 \u12418 \u12375 \u12394 \u12356 (\u29366 \u24907 \u19981 \u22793 )\u12290 \cf4 \cb1 \strokec4 \
+\cb3         \cf8 \strokec8 bIdx\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 -1\cf4 \cb1 \strokec4 \
+\cb3         \cf8 \strokec8 found\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf9 \strokec9 false\cf4 \cb1 \strokec4 \
+\cb3         \cf7 \strokec7 for\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 0\cf4 \strokec4  \cf7 \strokec7 to\cf4 \strokec4  \cf8 \strokec8 n\cf4 \strokec4  \cf7 \strokec7 -\cf4 \strokec4  \cf10 \strokec10 1\cf4 \strokec4  \cf7 \strokec7 by\cf4 \strokec4  \cf10 \strokec10 1\cf4 \cb1 \strokec4 \
+\cb3             \cf7 \strokec7 if\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf8 \strokec8 found\cf4 \strokec4  \cf7 \strokec7 and\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zH\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4 ) \cf7 \strokec7 and\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zB\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4 ) \cf7 \strokec7 >\cf4 \strokec4  \cf8 \strokec8 aBar\cf4 \strokec4  \cf7 \strokec7 and\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zP\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4 ) \cf7 \strokec7 >\cf4 \strokec4  \cf8 \strokec8 aPx\cf4 \cb1 \strokec4 \
+\cb3                 \cf8 \strokec8 bIdx\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf8 \strokec8 j\cf4 \cb1 \strokec4 \
+\cb3                 \cf8 \strokec8 found\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf9 \strokec9 true\cf4 \cb1 \strokec4 \
+\cb3                 \cf8 \strokec8 found\cf4 \cb1 \strokec4 \
+\cb3         \cf7 \strokec7 if\cf4 \strokec4  \cf8 \strokec8 bIdx\cf4 \strokec4  \cf7 \strokec7 >=\cf4 \strokec4  \cf10 \strokec10 0\cf4 \cb1 \strokec4 \
+\cb3             \cf2 \strokec2 // C = A.bar < zB < B.bar \uc0\u12398 \u30906 \u23450 \u23433 \u20516 \u12398 \u38598 \u21512 S\u12398 \u26368 \u23433 \u20516 \u12290 S\u31354 \u8594 \u29366 \u24907 \u19981 \u22793 \cf4 \cb1 \strokec4 \
+\cb3             \cf8 \strokec8 nlo\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 float\cf4 \strokec4 (\cf9 \strokec9 na\cf4 \strokec4 )\cb1 \
+\cb3             \cf8 \strokec8 nix\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 -1\cf4 \cb1 \strokec4 \
+\cb3             \cf8 \strokec8 bB\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zB\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 bIdx\cf4 \strokec4 )\cb1 \
+\cb3             \cf7 \strokec7 for\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 0\cf4 \strokec4  \cf7 \strokec7 to\cf4 \strokec4  \cf8 \strokec8 n\cf4 \strokec4  \cf7 \strokec7 -\cf4 \strokec4  \cf10 \strokec10 1\cf4 \strokec4  \cf7 \strokec7 by\cf4 \strokec4  \cf10 \strokec10 1\cf4 \cb1 \strokec4 \
+\cb3                 \cf7 \strokec7 if\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zH\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4 ) \cf7 \strokec7 and\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zB\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4 ) \cf7 \strokec7 >\cf4 \strokec4  \cf8 \strokec8 aBar\cf4 \strokec4  \cf7 \strokec7 and\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zB\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4 ) \cf7 \strokec7 <\cf4 \strokec4  \cf8 \strokec8 bB\cf4 \cb1 \strokec4 \
+\cb3                     \cf7 \strokec7 if\cf4 \strokec4  \cf5 \strokec5 na\cf4 \strokec4 (\cf8 \strokec8 nlo\cf4 \strokec4 ) \cf7 \strokec7 or\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zP\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4 ) \cf7 \strokec7 <\cf4 \strokec4  \cf8 \strokec8 nlo\cf4 \cb1 \strokec4 \
+\cb3                         \cf8 \strokec8 nlo\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zP\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4 )\cb1 \
+\cb3                         \cf8 \strokec8 nix\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf8 \strokec8 j\cf4 \cb1 \strokec4 \
+\cb3                         \cf8 \strokec8 nix\cf4 \cb1 \strokec4 \
+\cb3             \cf7 \strokec7 if\cf4 \strokec4  \cf8 \strokec8 nix\cf4 \strokec4  \cf7 \strokec7 !=\cf4 \strokec4  \cf10 \strokec10 -1\cf4 \cb1 \strokec4 \
+\cb3                 \cf8 \strokec8 mta\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf8 \strokec8 nlo\cf4 \cb1 \strokec4 \
+\cb3                 \cf8 \strokec8 mtaBar\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zB\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 nix\cf4 \strokec4 )\cb1 \
+\cb3                 \cf8 \strokec8 aPx\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zP\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 bIdx\cf4 \strokec4 ) \cf2 \strokec2 // A \uc0\u8592  B\u65288 \u22522 \u28310 \u21069 \u36914 \u65289 \cf4 \cb1 \strokec4 \
+\cb3                 \cf8 \strokec8 aBar\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf8 \strokec8 bB\cf4 \cb1 \strokec4 \
+\cb3                 \cf8 \strokec8 f_needDraw\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf9 \strokec9 true\cf4 \cb1 \strokec4 \
+\cb3                 \cf8 \strokec8 f_needDraw\cf4 \cb1 \strokec4 \
+\cb3                 \cf2 \strokec2 // B\uc0\u35442 \u24403 \u28961 \u12375  \u8594  \u12371 \u12398 \u12496 \u12540 \u12399 \u20309 \u12418 \u12375 \u12394 \u12356 \u65288 \'a76: \u35442 \u24403 \u12364 \u28961 \u12369 \u12428 \u12400 \u29366 \u24907 \u19981 \u22793 \u65289 \cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 // \uc0\u9472 \u9472  \u19979 \u38477 \u12488 \u12524 \u12531 \u12489  \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb3 \strokec7 if\cf4 \strokec4  \cf8 \strokec8 trend\cf4 \strokec4  \cf7 \strokec7 ==\cf4 \strokec4  \cf10 \strokec10 -1\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3     \cf7 \strokec7 if\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf5 \strokec5 na\cf4 \strokec4 (\cf8 \strokec8 mta\cf4 \strokec4 ) \cf7 \strokec7 and\cf4 \strokec4  \cf9 \strokec9 close\cf4 \strokec4  \cf7 \strokec7 >\cf4 \strokec4  \cf8 \strokec8 mta\cf4 \cb1 \strokec4 \
+\cb3         \cf2 \strokec2 // \uc0\u32066 \u20102 : close\u23455 \u20307 \u12364 \u29694 \u22312 \u12398 C\u12434 \u19978 \u25244 \u12369 \cf4 \cb1 \strokec4 \
+\cb3         \cf8 \strokec8 trend\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf10 \strokec10 0\cf4 \cb1 \strokec4 \
+\cb3         \cf8 \strokec8 aPx\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf9 \strokec9 na\cf4 \cb1 \strokec4 \
+\cb3         \cf8 \strokec8 aBar\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf10 \strokec10 -1\cf4 \cb1 \strokec4 \
+\cb3         \cf7 \strokec7 if\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf5 \strokec5 na\cf4 \strokec4 (\cf8 \strokec8 lMta\cf4 \strokec4 )\cb1 \
+\cb3             \cf5 \strokec5 line.set_style\cf4 \strokec4 (\cf8 \strokec8 lMta\cf7 \strokec7 ,\cf4 \strokec4  \cf9 \strokec9 line.style_dotted\cf4 \strokec4 )\cb1 \
+\cb3     \cf7 \strokec7 else\cf4 \strokec4  \cf7 \strokec7 if\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf5 \strokec5 na\cf4 \strokec4 (\cf8 \strokec8 aPx\cf4 \strokec4 ) \cf7 \strokec7 and\cf4 \strokec4  \cf9 \strokec9 close\cf4 \strokec4  \cf7 \strokec7 <\cf4 \strokec4  \cf8 \strokec8 aPx\cf4 \cb1 \strokec4 \
+\cb3         \cf2 \strokec2 // \uc0\u26356 \u26032 (\'a79 \u19979 \u38477 \u23550 \u31216 ): B = A.bar\u12424 \u12426 \u22823 \u12539 A.price\u12424 \u12426 \u20302 \u12356 \u30906 \u23450 \u23433 \u20516 \u12398 \cf4 \cb1 \strokec4 \
+\cb3         \cf2 \strokec2 // \uc0\u12358 \u12385 \u26178 \u31995 \u21015 \u12391 \u26368 \u12418 \u26089 \u12356 1\u12388 (\u26368 \u21476 )\u12290 \u35442 \u24403 \u28961 \u12369 \u12428 \u12400 \u20309 \u12418 \u12375 \u12394 \u12356 (\u29366 \u24907 \u19981 \u22793 )\u12290 \cf4 \cb1 \strokec4 \
+\cb3         \cf8 \strokec8 bIdx\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 -1\cf4 \cb1 \strokec4 \
+\cb3         \cf8 \strokec8 found\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf9 \strokec9 false\cf4 \cb1 \strokec4 \
+\cb3         \cf7 \strokec7 for\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 0\cf4 \strokec4  \cf7 \strokec7 to\cf4 \strokec4  \cf8 \strokec8 n\cf4 \strokec4  \cf7 \strokec7 -\cf4 \strokec4  \cf10 \strokec10 1\cf4 \strokec4  \cf7 \strokec7 by\cf4 \strokec4  \cf10 \strokec10 1\cf4 \cb1 \strokec4 \
+\cb3             \cf7 \strokec7 if\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf8 \strokec8 found\cf4 \strokec4  \cf7 \strokec7 and\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zH\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4 ) \cf7 \strokec7 and\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zB\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4 ) \cf7 \strokec7 >\cf4 \strokec4  \cf8 \strokec8 aBar\cf4 \strokec4  \cf7 \strokec7 and\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zP\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4 ) \cf7 \strokec7 <\cf4 \strokec4  \cf8 \strokec8 aPx\cf4 \cb1 \strokec4 \
+\cb3                 \cf8 \strokec8 bIdx\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf8 \strokec8 j\cf4 \cb1 \strokec4 \
+\cb3                 \cf8 \strokec8 found\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf9 \strokec9 true\cf4 \cb1 \strokec4 \
+\cb3                 \cf8 \strokec8 found\cf4 \cb1 \strokec4 \
+\cb3         \cf7 \strokec7 if\cf4 \strokec4  \cf8 \strokec8 bIdx\cf4 \strokec4  \cf7 \strokec7 >=\cf4 \strokec4  \cf10 \strokec10 0\cf4 \cb1 \strokec4 \
+\cb3             \cf2 \strokec2 // C = A.bar < zB < B.bar \uc0\u12398 \u30906 \u23450 \u39640 \u20516 \u12398 \u38598 \u21512 S\u12398 \u26368 \u39640 \u20516 \u12290 S\u31354 \u8594 \u29366 \u24907 \u19981 \u22793 \cf4 \cb1 \strokec4 \
+\cb3             \cf8 \strokec8 nhi\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 float\cf4 \strokec4 (\cf9 \strokec9 na\cf4 \strokec4 )\cb1 \
+\cb3             \cf8 \strokec8 nix\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 -1\cf4 \cb1 \strokec4 \
+\cb3             \cf8 \strokec8 bB\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zB\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 bIdx\cf4 \strokec4 )\cb1 \
+\cb3             \cf7 \strokec7 for\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 0\cf4 \strokec4  \cf7 \strokec7 to\cf4 \strokec4  \cf8 \strokec8 n\cf4 \strokec4  \cf7 \strokec7 -\cf4 \strokec4  \cf10 \strokec10 1\cf4 \strokec4  \cf7 \strokec7 by\cf4 \strokec4  \cf10 \strokec10 1\cf4 \cb1 \strokec4 \
+\cb3                 \cf7 \strokec7 if\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zH\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4 ) \cf7 \strokec7 and\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zB\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4 ) \cf7 \strokec7 >\cf4 \strokec4  \cf8 \strokec8 aBar\cf4 \strokec4  \cf7 \strokec7 and\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zB\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4 ) \cf7 \strokec7 <\cf4 \strokec4  \cf8 \strokec8 bB\cf4 \cb1 \strokec4 \
+\cb3                     \cf7 \strokec7 if\cf4 \strokec4  \cf5 \strokec5 na\cf4 \strokec4 (\cf8 \strokec8 nhi\cf4 \strokec4 ) \cf7 \strokec7 or\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zP\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4 ) \cf7 \strokec7 >\cf4 \strokec4  \cf8 \strokec8 nhi\cf4 \cb1 \strokec4 \
+\cb3                         \cf8 \strokec8 nhi\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zP\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 j\cf4 \strokec4 )\cb1 \
+\cb3                         \cf8 \strokec8 nix\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf8 \strokec8 j\cf4 \cb1 \strokec4 \
+\cb3                         \cf8 \strokec8 nix\cf4 \cb1 \strokec4 \
+\cb3             \cf7 \strokec7 if\cf4 \strokec4  \cf8 \strokec8 nix\cf4 \strokec4  \cf7 \strokec7 !=\cf4 \strokec4  \cf10 \strokec10 -1\cf4 \cb1 \strokec4 \
+\cb3                 \cf8 \strokec8 mta\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf8 \strokec8 nhi\cf4 \cb1 \strokec4 \
+\cb3                 \cf8 \strokec8 mtaBar\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zB\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 nix\cf4 \strokec4 )\cb1 \
+\cb3                 \cf8 \strokec8 aPx\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf5 \strokec5 array.get\cf4 \strokec4 (\cf8 \strokec8 zP\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 bIdx\cf4 \strokec4 ) \cf2 \strokec2 // A \uc0\u8592  B\u65288 \u22522 \u28310 \u21069 \u36914 \u65289 \cf4 \cb1 \strokec4 \
+\cb3                 \cf8 \strokec8 aBar\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf8 \strokec8 bB\cf4 \cb1 \strokec4 \
+\cb3                 \cf8 \strokec8 f_needDraw\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf9 \strokec9 true\cf4 \cb1 \strokec4 \
+\cb3                 \cf8 \strokec8 f_needDraw\cf4 \cb1 \strokec4 \
+\cb3                 \cf2 \strokec2 // B\uc0\u35442 \u24403 \u28961 \u12375  \u8594  \u12371 \u12398 \u12496 \u12540 \u12399 \u20309 \u12418 \u12375 \u12394 \u12356 \u65288 \'a76/\'a79: \u35442 \u24403 \u28961 \u12375 \u12399 \u29366 \u24907 \u19981 \u22793 \u65289 \cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 // \uc0\u9472 \u9472  MTA\u32218 /\u12521 \u12505 \u12523 \u25551 \u30011 \u65288 \u30330 \u29983  or \u26356 \u26032 \u12452 \u12505 \u12531 \u12488 \u26178 \u12398 \u12415 \u65289  \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb3 \strokec7 if\cf4 \strokec4  \cf8 \strokec8 f_needDraw\cf4 \strokec4  \cf7 \strokec7 and\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf5 \strokec5 na\cf4 \strokec4 (\cf8 \strokec8 mta\cf4 \strokec4 )\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3     \cf7 \strokec7 if\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf5 \strokec5 na\cf4 \strokec4 (\cf8 \strokec8 lMta\cf4 \strokec4 )\cb1 \
+\cb3         \cf5 \strokec5 line.delete\cf4 \strokec4 (\cf8 \strokec8 lMta\cf4 \strokec4 )\cb1 \
+\cb3     \cf7 \strokec7 if\cf4 \strokec4  \cf7 \strokec7 not\cf4 \strokec4  \cf5 \strokec5 na\cf4 \strokec4 (\cf8 \strokec8 lbMta\cf4 \strokec4 )\cb1 \
+\cb3         \cf5 \strokec5 label.delete\cf4 \strokec4 (\cf8 \strokec8 lbMta\cf4 \strokec4 )\cb1 \
+\cb3     \cf2 \strokec2 // \uc0\u19978 \u26119 =\u38738 /\u19979 \u38477 =\u36196 \u12290 \u12521 \u12505 \u12523 \u12399 "MTA"\u32113 \u19968 \u12289 \u30011 \u38754 \u21491 \u12408 lblOff\u12458 \u12501 \u12475 \u12483 \u12488 \cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 // \uc0\u19978 \u26119 =\u32218 \u12398 \u21491 \u19979 (label_up=\u12450 \u12531 \u12459 \u12540 \u19979 )/\u19979 \u38477 =\u32218 \u12398 \u21491 \u19978 (label_down=\u12450 \u12531 \u12459 \u12540 \u19978 )\cf4 \cb1 \strokec4 \
+\cb3     \cf8 \strokec8 mtaCol\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf8 \strokec8 trend\cf4 \strokec4  \cf7 \strokec7 ==\cf4 \strokec4  \cf10 \strokec10 1\cf4 \strokec4  \cf7 \strokec7 ?\cf4 \strokec4  \cf9 \strokec9 color.blue\cf4 \strokec4  \cf7 \strokec7 :\cf4 \strokec4  \cf9 \strokec9 color.red\cf4 \cb1 \strokec4 \
+\cb3     \cf8 \strokec8 lblSt\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf8 \strokec8 trend\cf4 \strokec4  \cf7 \strokec7 ==\cf4 \strokec4  \cf10 \strokec10 1\cf4 \strokec4  \cf7 \strokec7 ?\cf4 \strokec4  \cf9 \strokec9 label.style_label_up\cf4 \strokec4  \cf7 \strokec7 :\cf4 \strokec4  \cf9 \strokec9 label.style_label_down\cf4 \cb1 \strokec4 \
+\cb3     \cf8 \strokec8 lMta\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf5 \strokec5 line.new\cf4 \strokec4 (\cf8 \strokec8 mtaBar\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 mta\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 mtaBar\cf4 \strokec4  \cf7 \strokec7 +\cf4 \strokec4  \cf10 \strokec10 1\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 mta\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 xloc\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf9 \strokec9 xloc.bar_index\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 extend\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf9 \strokec9 extend.right\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 color\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf8 \strokec8 mtaCol\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 width\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf10 \strokec10 2\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 style\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf9 \strokec9 line.style_solid\cf4 \strokec4 )\cb1 \
+\cb3     \cf8 \strokec8 lbMta\cf4 \strokec4  \cf7 \strokec7 :=\cf4 \strokec4  \cf5 \strokec5 label.new\cf4 \strokec4 (\cf9 \strokec9 bar_index\cf4 \strokec4  \cf7 \strokec7 +\cf4 \strokec4  \cf8 \strokec8 lblOff\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 mta\cf7 \strokec7 ,\cf4 \strokec4  \cf6 \strokec6 'MTA'\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 xloc\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf9 \strokec9 xloc.bar_index\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 yloc\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf9 \strokec9 yloc.price\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 style\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf8 \strokec8 lblSt\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 color\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf5 \strokec5 color.new\cf4 \strokec4 (\cf9 \strokec9 color.white\cf7 \strokec7 ,\cf4 \strokec4  \cf10 \strokec10 100\cf4 \strokec4 )\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 textcolor\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf8 \strokec8 mtaCol\cf7 \strokec7 ,\cf4 \strokec4  \cf8 \strokec8 size\cf4 \strokec4  \cf7 \strokec7 =\cf4 \strokec4  \cf9 \strokec9 size.small\cf4 \strokec4 )\cb1 \
+\cb3     \cf8 \strokec8 lbMta\cf4 \cb1 \strokec4 \
+\
+}
