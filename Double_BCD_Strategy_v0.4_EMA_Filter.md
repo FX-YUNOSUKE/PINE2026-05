@@ -1,5 +1,5 @@
 //@version=5
-strategy('Double BCD Strategy v0.4 EMA Filter', overlay = true, max_bars_back = 500, default_qty_type = strategy.percent_of_equity, default_qty_value = 10, initial_capital = 10000, commission_type = strategy.commission.percent, commission_value = 0.04, slippage = 2, pyramiding = 0, process_orders_on_close = false, calc_on_every_tick = false)
+strategy('Double BCD Strategy v0.5 Tokyo Time Filter', overlay = true, max_bars_back = 500, default_qty_type = strategy.percent_of_equity, default_qty_value = 10, initial_capital = 10000, commission_type = strategy.commission.percent, commission_value = 0.04, slippage = 2, pyramiding = 0, process_orders_on_close = false, calc_on_every_tick = false)
 
 import DevLucem/ZigLib/1 as ZigZag
 
@@ -28,6 +28,11 @@ rrRatio    = input.float(2.0, 'リスクリワード比', minval = 0.5, step = 0
 /// INPUT — EMA FILTER
 useEMAfilter = input.bool(true, '200EMAフィルター', group = 'Trend Filter')
 emaLen       = input.int(200, 'EMA期間', minval = 10, step = 10, group = 'Trend Filter')
+
+/// INPUT — TIME FILTER
+useTimeFilter = input.bool(true, 'エントリー時間フィルターを使う', group = 'Time Filter')
+entrySession  = input.session('0800-2000', 'エントリー時間 日本時間', group = 'Time Filter')
+inEntryTime   = not useTimeFilter or not na(time(timeframe.period, entrySession, 'Asia/Tokyo'))
 
 /// INPUT — Date Filter
 useDateFilter = input.bool(false, '期間フィルタを使う', group = 'Backtest')
@@ -230,7 +235,7 @@ var float slPrice = na
 entryRef = close
 
 // SHORT
-if inWindow and tradeMTop and mForm and strategy.position_size == 0
+if inWindow and inEntryTime and tradeMTop and mForm and strategy.position_size == 0
 
     if useATRexit
         risk = slATRmult * atrG
@@ -249,7 +254,7 @@ if inWindow and tradeMTop and mForm and strategy.position_size == 0
 
 
 // LONG
-if inWindow and tradeWBot and wForm and strategy.position_size == 0
+if inWindow and inEntryTime and tradeWBot and wForm and strategy.position_size == 0
 
     if useATRexit
         risk = slATRmult * atrG
@@ -278,7 +283,6 @@ if strategy.position_size > 0
 // DATE FILTER
 if useDateFilter and not inWindow and strategy.position_size != 0
     strategy.close_all()
-
 
 /// VISUAL
 plot(ema200, title = 'EMA200', color = color.orange, linewidth = 2)
